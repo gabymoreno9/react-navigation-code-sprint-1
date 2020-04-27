@@ -3,6 +3,11 @@ import { Text, View, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
+import OrderScreen from '../screens/OrderScreen';
+import ViewOrderScreen from '../screens/ViewOrderScreen';
+import UserProfileScreen from '../screens/UserProfileScreen';
+
+
 import Colors from '../constants/colors';
 
 
@@ -46,23 +51,23 @@ const TabNavigator = () => {
       
       <Tabs.Screen
         name='New Order'
-        component={BlankView}
+        component={OrderScreen}
         options={() => ({
           tabBarIcon: ({ color }) =>
-            <Ionicons name='ios-star' size={25} color={color} />
+            <Ionicons name='ios-pizza' size={25} color={color} />
         })} />
 
       <Tabs.Screen
         name='View Orders'
-        component={BlankView}
+        component={ViewOrderScreen}
         options={() => ({
           tabBarIcon: ({ color }) =>
-            <Ionicons name='ios-star' size={25} color={color} />
+            <Ionicons name='ios-list' size={25} color={color} />
         })} />
 
       <Tabs.Screen
         name='Profile'
-        component={BlankView}
+        component={UserProfileScreen}
         options={() => ({
           tabBarIcon: ({ color }) =>
             <Ionicons name='ios-person' size={25} color={color} />
