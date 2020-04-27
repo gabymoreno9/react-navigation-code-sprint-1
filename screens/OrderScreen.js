@@ -6,7 +6,7 @@ import { Text, View, StyleSheet } from 'react-native';
 const OrderScreen = () => {
     return (
       <View style={styles.container}>
-        <Text>bongo</Text>
+        <Text>Order Screen Here</Text>
       </View>
     )
   }
