@@ -15,7 +15,7 @@ import Colors from '../constants/colors';
 const BlankView = () => {
   return (
     <View style={styles.container}>
-      <Text>Hello and Welcome To Bruce's Diner</Text>
+      <Text style = {styles.text}>Hello and Welcome To Bruce's Diner</Text>
     </View>
   )
 }
@@ -23,10 +23,14 @@ const BlankView = () => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#212738',
+      color: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
     },
+    text:{
+       color: '#fff',     
+    }
   });
   
 
