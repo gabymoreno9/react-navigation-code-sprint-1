@@ -15,7 +15,7 @@ import Colors from '../constants/colors';
 const BlankView = () => {
   return (
     <View style={styles.container}>
-      <Text>Hellooooo</Text>
+      <Text>Hello and Welcome To Bruce's Diner</Text>
     </View>
   )
 }
