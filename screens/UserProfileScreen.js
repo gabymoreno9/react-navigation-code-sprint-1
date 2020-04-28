@@ -12,7 +12,7 @@ const UserProfileScreen = props => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#D1D646',
       alignItems: 'center',
       justifyContent: 'center',
     },

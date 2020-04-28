@@ -15,7 +15,7 @@ const ViewOrderScreen = () => {
   const styles = StyleSheet.create({
       container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#57C4E5',
         alignItems: 'center',
         justifyContent: 'center',
       },
