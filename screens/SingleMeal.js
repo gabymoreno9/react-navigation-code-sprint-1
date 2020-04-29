@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 const SingleMealScreen = props =>{
     console.log(props.route);
     return (
         <View style = {styles.container}>
-            <Text>Thhis is my Single meal Screen!</Text>
+            <Text>{props.route.params.meal.title}</Text>
+            <Button title="Add to cart" />
         </View>
     );
 };
