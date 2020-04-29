@@ -18,8 +18,14 @@ const OrderStack = createStackNavigator();
 const OrderNavigator = () => {
   return (
     <OrderStack.Navigator>
-      <OrderStack.Screen name="Welcome to Bruce's Diner" component={OrderScreen} />
-      <OrderStack.Screen name="Single Meal" component={SingleMealScreen} />
+      <OrderStack.Screen
+        name="Order"
+        component={OrderScreen}
+        options={{ title: "Welcome to Bruce's Diner!" }} />
+      <OrderStack.Screen
+        name="Single Meal"
+        component={SingleMealScreen}
+        options={({ route }) => ({ title: route.params.meal.title })} />
     </OrderStack.Navigator>
   );
 };

@@ -6,6 +6,7 @@ const SingleMealScreen = props =>{
     return (
         <View style = {styles.container}>
             <Text>{props.route.params.meal.title}</Text>
+            <Text>{props.route.params.meal.price}</Text>
             <Button title="Add to cart" />
         </View>
     );
