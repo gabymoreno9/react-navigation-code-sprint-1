@@ -1,14 +1,28 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import OrderScreen from '../screens/OrderScreen';
 import ViewOrderScreen from '../screens/ViewOrderScreen';
 import UserProfileScreen from '../screens/UserProfileScreen';
+import SingleMealScreen from '../screens/SingleMeal';
 
 
 import Colors from '../constants/colors';
+
+// Orders Stack to inject into my Tabs
+const OrderStack = createStackNavigator();
+
+const OrderNavigator = () => {
+  return (
+    <OrderStack.Navigator>
+      <OrderStack.Screen name="Welcome to Bruce's Diner" component={OrderScreen} />
+      <OrderStack.Screen name="Single Meal" component={SingleMealScreen} />
+    </OrderStack.Navigator>
+  );
+};
 
 
 // create navigator component
@@ -55,7 +69,7 @@ const TabNavigator = () => {
       
       <Tabs.Screen
         name='New Order'
-        component={OrderScreen}
+        component={OrderNavigator}
         options={() => ({
           tabBarIcon: ({ color }) =>
             <Ionicons name='ios-pizza' size={25} color={color} />
